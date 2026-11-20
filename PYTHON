@@ -1,0 +1,30 @@
+
+print("=== PEMBAYARAN PARKIR ===")
+print("1. Motor (Rp2000/jam)")
+print("2. Mobil (Rp5000/jam)")
+
+jenis = int(input("Pilih kendaraan: "))
+jam = int(input("Lama parkir (jam): "))
+
+if jenis == 1:
+    total = jam * 2000
+elif jenis == 2:
+    total = jam * 5000
+else:
+    print("Pilihan tidak valid!")
+    total = -1
+
+if total != -1:
+    tambahan = 1000
+    total = total + tambahan
+
+    print("Biaya tambahan: Rp", tambahan)
+    print("Total bayar: Rp", total)
+
+    bayar = int(input("Uang bayar: Rp"))
+
+    if bayar >= total:
+        print("Kembalian: Rp", bayar - total)
+        print("Terima kasih!")
+    else:
+        print("Uang tidak cukup!")
